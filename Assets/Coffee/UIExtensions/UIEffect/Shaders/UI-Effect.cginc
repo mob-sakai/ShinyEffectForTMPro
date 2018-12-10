@@ -229,4 +229,19 @@ fixed edgeLerp = step(factor, color.a) * saturate((width - factor)*16/ dis_softn
 color = ApplyColorEffect(color, fixed4(dissolveColor, edgeLerp)); \
 alpha *= saturate((factor)*32/ dis_softness);
 
+#define APPLY_SHINY(color, shinyParam, alpha) \
+fixed4 originAlpha = alpha; \
+fixed nomalizedPos = shinyParam.x; \
+fixed4 param1 = tex2D(_ParamTex, float2(0.25, shinyParam.y)); \
+fixed4 param2 = tex2D(_ParamTex, float2(0.75, shinyParam.y)); \
+half location = param1.x * 2 - 0.5; \
+fixed width = param1.y; \
+fixed soft = param1.z; \
+fixed brightness = param1.w; \
+fixed gloss = param2.x; \
+half normalized = 1 - saturate(abs((nomalizedPos - location) / width)); \
+half shinePower = smoothstep(0, soft*2, normalized); \
+half3 reflectColor = lerp(1, color.rgb * 10, gloss); \
+color.rgb += originAlpha * (shinePower / 2) * brightness * reflectColor;
+
 #endif // UI_EFFECT_INCLUDED
