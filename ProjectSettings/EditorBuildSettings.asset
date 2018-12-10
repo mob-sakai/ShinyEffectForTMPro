@@ -7,5 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Coffee/UIExtensions/MeshEffectForTextMeshPro/Demo/ShinyEffectForTMPro_Demo.unity
-    guid: ffb169522aa3e4f90a5afc46e3f57d73
+    guid: 0ca6d43057f2e45da80f4009e06190ec
   m_configObjects: {}
