@@ -7,7 +7,7 @@ ShinyEffectForTMPro
 
 ShinyEffectForTMPro provide shiny effect component for TextMeshPro in Unity.
 
-![](https://user-images.githubusercontent.com/12690315/49693817-ba23c880-fbc0-11e8-869f-f0853010b609.png)
+![](https://user-images.githubusercontent.com/12690315/49728596-8c20b000-fcb6-11e8-87fa-e27eb6a90602.gif)
 
 [![](https://img.shields.io/github/release/mob-sakai/ShinyEffectForTMPro.svg?label=latest%20version)](https://github.com/mob-sakai/ShinyEffectForTMPro/releases)
 [![](https://img.shields.io/github/release-date/mob-sakai/ShinyEffectForTMPro.svg)](https://github.com/mob-sakai/ShinyEffectForTMPro/releases)
@@ -15,7 +15,7 @@ ShinyEffectForTMPro provide shiny effect component for TextMeshPro in Unity.
 [![](https://img.shields.io/github/license/mob-sakai/ShinyEffectForTMPro.svg)](https://github.com/mob-sakai/ShinyEffectForTMPro/blob/master/LICENSE.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](http://makeapullrequest.com)
 
-<< [Description](#Description) | [WebGL Demo](#demo) | [Download](https://github.com/mob-sakai/ShinyEffectForTMPro/releases) | [Usage](#usage) | [Example of using](#example-of-using) | [Development Note](#development-note) | [Change log](https://github.com/mob-sakai/ShinyEffectForTMPro/blob/master/CHANGELOG.md) >>
+<< [Description](#Description) | [WebGL Demo](#demo) | [Download](https://github.com/mob-sakai/ShinyEffectForTMPro/releases) | [Usage](#usage) | [Development Note](#development-note) | [Change log](https://github.com/mob-sakai/ShinyEffectForTMPro/blob/master/CHANGELOG.md) >>
 
 ### What's new? [See changelog ![](https://img.shields.io/github/release-date/mob-sakai/ShinyEffectForTMPro.svg?label=last%20updated)](https://github.com/mob-sakai/ShinyEffectForTMPro/blob/develop/CHANGELOG.md)
 ### Do you want to receive notifications for new releases? [Watch this repo ![](https://img.shields.io/github/watchers/mob-sakai/ShinyEffectForTMPro.svg?style=social&label=Watch)](https://github.com/mob-sakai/ShinyEffectForTMPro/subscription)
@@ -29,8 +29,7 @@ ShinyEffectForTMPro provide shiny effect component (from [UIEffect](https://gith
 
 It works well not only for standard Graphic components (Image, RawImage, Text, etc.) but also for TextMeshPro and TextMeshProUGUI.
 
-![](https://user-images.githubusercontent.com/12690315/49694176-6b7a2c80-fbc8-11e8-9461-c3595736b4d5.png)
-![](https://user-images.githubusercontent.com/12690315/49694175-69b06900-fbc8-11e8-9615-e675822decf3.png)
+![](https://user-images.githubusercontent.com/12690315/49728715-d86bf000-fcb6-11e8-8722-5f2b1e63ef34.png)
 
 
 #### Features
@@ -50,7 +49,7 @@ It works well not only for standard Graphic components (Image, RawImage, Text, e
 
 [WebGL Demo](http://mob-sakai.github.io/ShinyEffectForTMPro)
 
-![](https://user-images.githubusercontent.com/12690315/49693789-34a01880-fbc0-11e8-9ef2-fa8b0e4dd438.gif)
+![](https://user-images.githubusercontent.com/12690315/49728849-34367900-fcb7-11e8-83f7-f8bd23fe28e3.gif)
 
 
 
@@ -61,15 +60,15 @@ It works well not only for standard Graphic components (Image, RawImage, Text, e
 2. Import the package into your Unity project. Click `Import Package > Custom Package` from the `Assets` menu.  
 3. Enable `TexCoord1` and `TexCoord2` channels of canvas.  
 ![](https://user-images.githubusercontent.com/12690315/49696625-eacf2680-fbef-11e8-9360-f597f9d4484f.png)  
-![](https://user-images.githubusercontent.com/12690315/49696633-1eaa4c00-fbf0-11e8-92e5-37fa6a1e01f9.png)
-1. Add UIShiny component to TextMeshPro from `Add Component` in inspector or `Component > MeshEffectForTMPro > UIShiny` menu.
-2. Set shiny material preset to the TextMeshPro component. Press the Fix button to generate or set shiny material preset.  
-![](https://user-images.githubusercontent.com/12690315/49694638-3e7e4780-fbd1-11e8-8c7f-4d9a2e6c365a.png)
-5. (Option) Set shiny sprite asset to the TextMeshPro component. Press the Fix button to generate or set shiny sprite asset.  
-![](https://user-images.githubusercontent.com/12690315/49694647-535adb00-fbd1-11e8-8bea-7a64fdf00de0.png)
-6.  Adjust the parameters of the effect as you like, in inspector.  
+![](https://user-images.githubusercontent.com/12690315/49728477-3b10bc00-fcb6-11e8-988d-24044866e888.png)
+4. Add UIShiny component to TextMeshPro from `Add Component` in inspector or `Component > MeshEffectForTMPro > UIShiny` menu.
+5. Set shiny material preset to the TextMeshPro component. Press the Fix button to generate or set shiny material preset.  
+![](https://user-images.githubusercontent.com/12690315/49728471-377d3500-fcb6-11e8-849b-d664aeb9da75.png)
+6. (Option) Set shiny sprite asset to the TextMeshPro component. Press the Fix button to generate or set shiny sprite asset.  
+![](https://user-images.githubusercontent.com/12690315/49728474-3946f880-fcb6-11e8-9668-778e07e60fe6.png)
+7.  Adjust the parameters of the effect as you like, in inspector.  
 ![](https://user-images.githubusercontent.com/12690315/49696677-e0615c80-fbf0-11e8-98f5-c60890915129.gif)
-7.  Enjoy!
+8.  Enjoy!
 
 
 
