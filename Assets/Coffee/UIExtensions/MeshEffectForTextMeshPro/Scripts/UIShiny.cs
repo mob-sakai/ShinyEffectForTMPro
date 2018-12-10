@@ -70,6 +70,10 @@ namespace Coffee.UIExtensions
 		//################################
 		// Public Members.
 		//################################
+		/// <summary>
+		/// Additional canvas shader channels to use this component.
+		/// </summary>
+		public override AdditionalCanvasShaderChannels requiredChannels { get { return AdditionalCanvasShaderChannels.TexCoord1 | AdditionalCanvasShaderChannels.TexCoord2; } }
 
 		/// <summary>
 		/// Effect factor between 0(start) and 1(end).
@@ -220,8 +224,8 @@ namespace Coffee.UIExtensions
 			{
 				if (!Mathf.Approximately(m_Rotation, value))
 				{
-					m_Rotation = value;
-					SetDirty();
+					m_Rotation = _lastRotation = value;
+					SetVerticesDirty ();
 				}
 			}
 		}
@@ -237,7 +241,7 @@ namespace Coffee.UIExtensions
 				if (m_EffectArea != value)
 				{
 					m_EffectArea = value;
-					SetDirty();
+					SetVerticesDirty ();
 				}
 			}
 		}
@@ -245,11 +249,13 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Play shinning on enable.
 		/// </summary>
+		[System.Obsolete ("Use Play/Stop method instead")]
 		public bool play { get { return _player.play; } set { _player.play = value; } }
 
 		/// <summary>
 		/// Play shinning loop.
 		/// </summary>
+		[System.Obsolete]
 		public bool loop { get { return _player.loop; } set { _player.loop = value; } }
 
 		/// <summary>
@@ -260,6 +266,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Delay on loop.
 		/// </summary>
+		[System.Obsolete]
 		public float loopDelay { get { return _player.loopDelay; } set { _player.loopDelay = Mathf.Max(value, 0); } }
 
 		/// <summary>
@@ -294,6 +301,11 @@ namespace Coffee.UIExtensions
 #if UNITY_EDITOR
 		protected override Material GetMaterial()
 		{
+			if (isTMPro)
+			{
+				return null;
+			}
+
 			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName));
 		}
 
@@ -343,10 +355,19 @@ namespace Coffee.UIExtensions
 				vh.PopulateUIVertex(ref vertex, i);
 				m_EffectArea.GetNormalizedFactor (i, localMatrix, vertex.position, isText, out nomalizedPos);
 
-				vertex.uv0 = new Vector2(
-					Packer.ToFloat(vertex.uv0.x, vertex.uv0.y),
-					Packer.ToFloat(nomalizedPos.y, normalizedIndex)
-				);
+				if (isTMPro)
+				{
+					vertex.uv2 = new Vector2 (
+							Packer.ToFloat (nomalizedPos.y, normalizedIndex), 0
+					);
+				}
+				else
+				{
+					vertex.uv0 = new Vector2 (
+					   Packer.ToFloat (vertex.uv0.x, vertex.uv0.y),
+					   Packer.ToFloat (nomalizedPos.y, normalizedIndex)
+				   );
+				}
 
 				vh.SetUIVertex(vertex, i);
 			}
@@ -370,7 +391,10 @@ namespace Coffee.UIExtensions
 
 		protected override void SetDirty()
 		{
-			ptex.RegisterMaterial(targetGraphic.material);
+			foreach (var m in materials)
+			{
+				ptex.RegisterMaterial (m);
+			}
 			ptex.SetData(this, 0, m_EffectFactor);	// param1.x : location
 			ptex.SetData(this, 1, m_Width);		// param1.y : width
 			ptex.SetData(this, 2, m_Softness);	// param1.z : softness
@@ -380,7 +404,7 @@ namespace Coffee.UIExtensions
 			if (!Mathf.Approximately(_lastRotation, m_Rotation) && targetGraphic)
 			{
 				_lastRotation = m_Rotation;
-				targetGraphic.SetVerticesDirty();
+				SetVerticesDirty();
 			}
 		}
 
