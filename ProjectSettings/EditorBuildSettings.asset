@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Coffee/UIExtensions/MeshEffectForTextMeshPro/Demo/DissolveEffectForTMPro_Demo.unity
+    path: Assets/Coffee/UIExtensions/MeshEffectForTextMeshPro/Demo/ShinyEffectForTMPro_Demo.unity
     guid: ffb169522aa3e4f90a5afc46e3f57d73
   m_configObjects: {}

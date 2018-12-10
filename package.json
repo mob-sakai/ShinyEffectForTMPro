@@ -1,9 +1,9 @@
 {
-  "name": "DissolveEffectForTMPro",
-  "version": "1.0.2",
+  "name": "ShinyEffectForTMPro",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mob-sakai/DissolveEffectForTMPro.git"
+    "url": "git+https://github.com/mob-sakai/ShinyEffectForTMPro.git"
   },
   "src": "Assets/Coffee/UIExtensions",
   "license": "MIT"
