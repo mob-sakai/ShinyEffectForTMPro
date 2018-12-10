@@ -101,7 +101,7 @@ namespace Coffee.UIExtensions
 		{
 			if (isText && area == EffectArea.Character)
 			{
-				nomalizedPos = matrix * splitedCharacterPosition [index % 4];
+				nomalizedPos = matrix * splitedCharacterPosition [(index + 3) % 4];
 			}
 			else
 			{
