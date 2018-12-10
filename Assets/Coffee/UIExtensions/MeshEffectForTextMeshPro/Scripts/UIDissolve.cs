@@ -61,7 +61,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Additional canvas shader channels to use this component.
 		/// </summary>
-		public override AdditionalCanvasShaderChannels requiredChannels { get { return AdditionalCanvasShaderChannels.TexCoord1 | AdditionalCanvasShaderChannels.TexCoord2; } }
+		public override AdditionalCanvasShaderChannels requiredChannels { get { return isTMPro ? AdditionalCanvasShaderChannels.TexCoord1 | AdditionalCanvasShaderChannels.TexCoord2 : AdditionalCanvasShaderChannels.TexCoord1; } }
 
 		/// <summary>
 		/// Effect factor between 0(start) and 1(end).
