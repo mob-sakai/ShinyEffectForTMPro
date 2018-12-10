@@ -296,7 +296,7 @@ SubShader {
 			faceColor *= m.x * m.y;
 		#endif
 
-		APPLY_SHINY(faceColor, input.shinyParam, faceColor.a);
+		APPLY_SHINY(faceColor, input.shinyParam);
 		
 		#if UNITY_UI_ALPHACLIP
 			clip(faceColor.a - 0.001);

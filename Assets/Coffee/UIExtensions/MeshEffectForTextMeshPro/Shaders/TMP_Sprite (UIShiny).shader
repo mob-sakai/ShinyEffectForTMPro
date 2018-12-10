@@ -114,7 +114,7 @@ Shader "TextMeshPro/Sprite (UIShiny)"
 					clip (color.a - 0.001);
 				#endif
                 
-                APPLY_SHINY(color, IN.shinyParam, color.a);
+                APPLY_SHINY(color, IN.shinyParam);
 
 				return color;
 			}

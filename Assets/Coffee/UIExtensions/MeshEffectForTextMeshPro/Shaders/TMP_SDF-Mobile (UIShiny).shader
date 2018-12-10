@@ -222,7 +222,7 @@ SubShader {
 			c *= input.texcoord1.z;
 		#endif
 		
-		APPLY_SHINY(c, input.shinyParam, c.a);
+		APPLY_SHINY(c, input.shinyParam);
 
 		#if UNITY_UI_ALPHACLIP
 			clip(c.a - 0.001);
