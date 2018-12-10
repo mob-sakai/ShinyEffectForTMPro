@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_Softness: 1
   m_Brightness: 0.65
   m_Gloss: 1
-  m_EffectArea: 0
+  m_EffectArea: 1
   m_Player:
     play: 0
     loop: 0
