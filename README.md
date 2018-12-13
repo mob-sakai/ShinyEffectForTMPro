@@ -67,7 +67,7 @@ It works well not only for standard Graphic components (Image, RawImage, Text, e
 6. (Option) Set shiny sprite asset to the TextMeshPro component. Press the Fix button to generate or set shiny sprite asset.  
 ![](https://user-images.githubusercontent.com/12690315/49728474-3946f880-fcb6-11e8-9668-778e07e60fe6.png)
 7.  Adjust the parameters of the effect as you like, in inspector.  
-![](https://user-images.githubusercontent.com/12690315/49696677-e0615c80-fbf0-11e8-98f5-c60890915129.gif)
+![](https://user-images.githubusercontent.com/12690315/49911615-64a23100-feca-11e8-8c94-4c303908d408.gif)
 8.  Enjoy!
 
 
