@@ -1,0 +1,10 @@
+{
+  "name": "ShinyEffectForTMPro",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mob-sakai/ShinyEffectForTMPro.git"
+  },
+  "src": "Assets/Coffee/UIExtensions",
+  "license": "MIT"
+}
